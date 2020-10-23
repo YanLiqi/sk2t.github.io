@@ -2,24 +2,24 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SK2T: Semantic Knowledge in Two-Stage Training for Video Captioning</title>
     <!-- Favicon -->
-    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <link href="assets/img/favicon.ico" rel="shortcut icon" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
     <!-- themify icon -->
-    <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css" />
     <!-- video popup -->
-    <link rel="stylesheet" type="text/css" href="assets/css/colorbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/colorbox.css" />
     <!-- swiper slider -->
-    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
     <!-- Animate Css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
     <!-- CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -30,13 +30,13 @@
     </div>
 
     <!-- Start Header Section -->
-    <header class="header_wrap header_wrap_2">
+    <header class="header_wrap">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <nav class="mega_nav navbar navbar-expand-md p-0 justify-content-between">
                         <div class="nav_left">
-                            <a class="navbar-brand" href="index.html"><img src="assets/img/logo_2.png" alt="AiR Lab" width="80" height="60"></a>
+                            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="AiR Lab" width="80" height="60"></a>
                             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                                 data-target="#mega_menu">
                                 <span class="sr-only">Toggle navigation</span>
@@ -59,7 +59,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="team.html" target="_blank">About Us</a>
                                 </li>
-                                <!-- <li class="nav-item dropdown_item">
+                                <!-- 
+                                <li class="nav-item dropdown_item">
                                     <a class="nav-link collapsed " href="#mega_pages" data-toggle="collapse">Pages</a>
                                     <div id="mega_pages" class="dropdown_content ">
                                         <ul>
@@ -98,7 +99,6 @@
             </div>
         </div>
     </header>
-    </header>
     <!-- End Header Section -->
 
     <!-- Start Hero Section -->
@@ -108,11 +108,15 @@
                 <div class="col-md-12">
                     <div
                         class="page_title justify-content-center align-items-center align-items-md-start align-items-lg-center d-flex flex-column">
-                        <h1>Team Member</h1>
+                        <h1>Supplementary Material</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html" target="_blank">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                                <li class="breadcrumb-item">
+                                    <a href="index.html" target="_blank">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Additional Details
+                                </li>
                             </ol>
                         </nav>
                     </div>
@@ -120,7 +124,7 @@
             </div>
             <!-- <div class="video_wrapper">
                 <div class="video_img">
-                    <img class="hero_img hero_img1" src="assets/img/hero_area/1.png" alt="heroImage">
+                    <img class="hero_img hero_img1" src="assets/img/hero_area/1.png" alt="heroImage" />
                     <a class="btn_pluse youtube" href="https://www.youtube.com/embed/QE5KOfjKLy0"><span></span></a>
                 </div>
             </div> -->
@@ -128,100 +132,154 @@
     </section>
     <!-- End Hero Section -->
 
-    <!-- Start Team Section -->
-    <section class="team_area section_padding_2">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+
+    <!-- Start Service Section 1-->
+    <section class="service_details_area ">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="team_member">
-                        <img src="assets/img/team/1.jpg" alt="team">
-                        <h5>Liqi Yan</h5>
-                        <p class="designation">yanliqi@westlake.edu.cn</p>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <div class="common_block common_block_2">
+                        <h2 class="heading">
+                            RL-based loss function
+                        </h2>
+                        <p class="defination">
+                            In Equation (2) and (3) of the main test we have introduced the gradient 
+                            descent method to update our network parameters `\theta` by computing 
+                            differential of the RL-base loss:
+
+                            <span>`\nabla_{\theta} L_{RL}(\theta) = - \sum_{S} \nabla_{\theta} r(S)p(S | F; \theta)`</span>
+                        </p>
+                        
+                        <p class="defination">
+                            Since the reward `r(S)` is not a function that depends on `\theta`, it is 
+                            not differentiable with regard to `\theta`, so this gradient can be rewritten as:
+
+                            <span>`\nabla_{\theta} L_{RL}(\theta) = - \sum_{S} r(S) \nabla_{\theta} p(S | F; \theta)\  `
+                            `= - \sum_{S} p(S | F; \theta) r(S) \frac{\nabla_{\theta} p(S|F; \theta)}{p(S | F; \theta)}`
+                            `= - \sum_{S} p(S | F; \theta) r(S) \nabla_{\theta} log p(S | F; \theta)\  `
+                            `= - \mathbb{E}_{S~p} [r(S) \nabla_{\theta} log p(S | F; \theta)]`<span>
+                        </p>
+                        <p class="defination">
+                            In Equation (4) of the main text we reduce the RL-based loss with a baseline `b`. When we use `r(S^b)` as the baseline:
+
+                            <span>`\nabla_{\theta} L_{RL}(\theta) = - \mathbb{E}_{S~ p} [(r(S) - r(S^b)) \nabla_{\theta} log p(S | F; \theta)]`<span>
+                        </p>
+
+                        
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="team_member">
-                        <img src="assets/img/team/2.jpg" alt="team">
-                        <h5>Dongfang Liu</h5>
-                        <p class="designation">liu2538@purdue.edu</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="team_member">
-                        <img src="assets/img/team/3.jpg" alt="team">
-                        <h5>Yaoxian Song</h5>
-                        <p class="designation">songyaoxian@westlake.edu.cn</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="team_member">
-                        <img src="assets/img/team/4.jpg" alt="team">
-                        <h5>Changbin Yu</h5>
-                        <p class="designation">yuchangbin@westlake.edu.cn</p>
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                    <div class="img_wrapper_2">
+                        <!-- <div class="img_inner_wrap"> -->
+                        <div>
+                            <img class="" src="assets/img/details/1.png" alt="RL" width="530" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Team Section -->
+    <!-- End Service Section 1-->
 
-    <!-- Start client Section -->
-    <div class="client_area section_padding">
+    <!-- Start Service Section 2-->
+    <section class="service_details_area section_padding_2">
         <div class="container">
-            <div class="row  justify-content-center">
-                <div class="col-md-12">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper d-flex align-items-center">
-                            <div class="swiper-slide">
-                                <div class="client_img d-flex justify-content-center align-items-center">
-                                    <a href="#"><img src="assets/img/clients/1.png" alt=" client"></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="client_img d-flex justify-content-center align-items-center">
-                                    <a href="#"><img src="assets/img/clients/2.png" alt=" client"></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="client_img d-flex justify-content-center align-items-center">
-                                    <a href="#"><img src="assets/img/clients/3.png" alt=" client"></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="client_img d-flex justify-content-center align-items-center">
-                                    <a href="#"><img src="assets/img/clients/4.png" alt=" client image"></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="client_img d-flex justify-content-center align-items-center">
-                                    <a href="#"><img src="assets/img/clients/5.png" alt=" client image"></a>
-                                </div>
-                            </div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-12">
+                    <div class="common_block common_block_2">
+                        
+                        <p class="defination">
+                            Please note that the baseline can reduce the variance of the gradient 
+                            without changing the expected value of gradient, since:
+                            <span>`\sum_{S} b \nabla_{\theta} p(S | F; \theta) = b \nabla_{\theta} \sum_{S} p(S | F; \theta) = b\nabla_{\theta} 1 = 0` <span>
+                            
+                        </p>
+                        <p class="defination">
+                            When Stochastic Gradient Descent (SGD) is applied, gradient update for each video processed, 
+                            then this gradient `\nabla_{\theta}` can be approximated by Monte-Carlo (MC) sampling through a single training example:
+
+                            <span>`\nabla_{\theta} L_{RL}(\theta) \approx - (r(S) - r(S^b)) \nabla_{\theta} log p(S | F; \theta)`<span>
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6">
+                    <div class="video_wrapper_2">
+                        <div class="video_thumb">
+                            <img src="assets/img/service/4.png" alt="">
                         </div>
+                        <div class="video_inner_wrap">
+                            <a class="btn_pluse youtube"
+                                href="https://www.youtube.com/embed/QE5KOfjKLy0"><span></span></a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section 2-->
+
+    <!-- Start Service Section 3-->
+    <section class="service_details_area section_padding_2">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 ">
+                    <div class="common_block common_block_3">
+                        <h2 class="heading">
+                            The difference between WXE loss and the RL-based loss
+                        </h2>
+                        <p class="defination">
+                            WXE is trained on ground truth and the weight in it is calculated on the various target descriptions for one video, while the reward of full RL training is evaluated on sentences sampled from the network. 
+
+                        </p>
+                        <p class="defination">
+
+                            In WXE, the metric score, as the weight of the loss, represents the quality of each manual annotations; but in RL, the metric score is the reward which evaluates the quality of the generated sentence.
+                        </p>
+                        <p class="defination">
+                            The purpose of introducing weight in WXE is to make the generated sentences closer to those ground-truth sentences with higher scores, while the reward of RL is to motivate the model to generate sentences with higher scores.
+                        </p>
+                        <p class="defination">
+
+                            Because our two-stage method avoids the shortcoming of having to learn an estimate of expected rewards as a baseline in RL-based loss function, it can be more effectively trained on single example of sampled sentences using SGD.
+                        </p>
+                        <!-- <p class="mb-2">
+                            That’s why you can easily choose between fullwidth the theme
+                            options you can change the and layout with one click and thank
+                            to the are wordPress customizer you even.
+                        </p>
+                        <p class="m-0">
+                            That’s why you can easily choose between fullwidth the theme
+                            options you can change the and layout with one click and thank
+                            to the are wordPress customizer you even. That’s why you can easily choose between fullwidth
+                            the theme
+                            options you can change the and layout with one click and thank
+                            to the are wordPress customizer you even.
+                        </p> -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End client Section -->
+    </section>
+    <!-- End Service Section 3-->
 
     <!-- Start Call To Action Section -->
-    <!-- <section class="call_to_action_area">
+    <section class="call_to_action_area">
         <div class="ct_wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 offset-md-1 d-flex align-items-center">
+                    <div class="col-lg-5 col-md-8  offset-lg-1 d-flex align-items-center">
                         <div class="ct_action">
-                            <h2 class="heading m-md-0">We are providing best business service.</h2>
+                            <h2 class="heading m-md-0">If you have any questions, please:</h2>
                         </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-md-end">
+                    <div class="col-lg-5 col-md-4 d-flex align-items-center justify-content-md-end">
                         <a href="#" class="btn_2 btn">Contac us</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- End Call To Action Section -->
 
     <!-- Start Footer Section -->
@@ -313,19 +371,6 @@
     <script src="assets/js/jquery.counterup.min.js"></script>
     <!-- Custom js -->
     <script src="assets/js/main.js"></script>
-    <!-- Start of Tawk.to -->
-    <script>
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/5d3e5f786d808312283a7147/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
 </body>
 
 </html>
