@@ -111,14 +111,14 @@
                 <div class="col-md-12">
                     <div
                         class="page_title justify-content-center align-items-center align-items-md-start align-items-lg-center d-flex flex-column">
-                        <h1>Supplementary Material</h1>
+                        <h1>Examples</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a href="index.html" target="_blank">Home</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Additional Details
+                                    Examples of Videos and Generated Captions
                                 </li>
                             </ol>
                         </nav>
@@ -135,49 +135,50 @@
     </section>
     <!-- End Hero Section -->
 
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
 
     <!-- Start Service Section 1-->
-    <section class="service_details_area ">
+    <section class="service_details_area section_padding_2">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="common_block common_block_2">
-                        <h2 class="heading">
-                            RL-based loss function
-                        </h2>
-                        <p class="defination">
-                            In Equation (2) and (3) of the main test we have introduced the gradient 
-                            descent method to update our network parameters `\theta` by computing 
-                            differential of the RL-base loss:
-
-                            <span>`\nabla_{\theta} L_{RL}(\theta) = - \sum_{S} \nabla_{\theta} r(S)p(S | F; \theta)`</span>
-                        </p>
-                        
-                        <p class="defination">
-                            Since the reward `r(S)` is not a function that depends on `\theta`, it is 
-                            not differentiable with regard to `\theta`, so this gradient can be rewritten as:
-
-                            <span>`\nabla_{\theta} L_{RL}(\theta) = - \sum_{S} r(S) \nabla_{\theta} p(S | F; \theta)\  `
-                            `= - \sum_{S} p(S | F; \theta) r(S) \frac{\nabla_{\theta} p(S|F; \theta)}{p(S | F; \theta)}`
-                            `= - \sum_{S} p(S | F; \theta) r(S) \nabla_{\theta} log p(S | F; \theta)\  `
-                            `= - \mathbb{E}_{S~p} [r(S) \nabla_{\theta} log p(S | F; \theta)]`<span>
+                        <!-- <h2 class="heading">
+                            Tags
+                        </h2> -->
+                        <p>
+                            <font size="6"><b>Tags</b></font> 
                         </p>
                         <p class="defination">
-                            In Equation (4) of the main text we reduce the RL-based loss with a baseline `b`. When we use `r(S^b)` as the baseline:
+                            <font size="5">woman, lady, color, makeup, shows, girl...</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Baseline:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">A woman is talking about a cartoon.</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Ours:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5" color="#000099"><b>A woman is painting her nails.</b></font>
 
-                            <span>`\nabla_{\theta} L_{RL}(\theta) = - \mathbb{E}_{S~ p} [(r(S) - r(S^b)) \nabla_{\theta} log p(S | F; \theta)]`<span>
                         </p>
 
                         
                     </div>
                 </div>
                 <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
-                    <div class="img_wrapper_2">
+                    <div >
                         <!-- <div class="img_inner_wrap"> -->
-                        <div>
-                            <img class="" src="assets/img/details/1.png" alt="RL" width="530" />
-                        </div>
+                        <video width="500" controls="controls">
+                            <source src="assets/video/video7656.mp4" type="video/mp4" />
+                            <source src="assets/video/video7656.webm" type="video/webm" />
+                            <source src="assets/video/video7656.ogg" type="video/ogg" />
+                            <object data="assets/video/video7656.mp4" >
+                                <embed src="assets/video/video7656.swf"  />
+                            </object>
+                        </video>
                     </div>
                 </div>
             </div>
@@ -185,45 +186,291 @@
     </section>
     <!-- End Service Section 1-->
 
+    <br>
+    <HR>
+    <br>
+
     <!-- Start Service Section 2-->
     <section class="service_details_area section_padding_2">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-12">
-                    <div class="common_block common_block_2">
-                        
-                        <p class="defination">
-                            Please note that the baseline can reduce the variance of the gradient 
-                            without changing the expected value of gradient, since:
-                            <span>`\sum_{S} b \nabla_{\theta} p(S | F; \theta) = b \nabla_{\theta} \sum_{S} p(S | F; \theta) = b\nabla_{\theta} 1 = 0` <span>
-                            
-                        </p>
-                        <p class="defination">
-                            When Stochastic Gradient Descent (SGD) is applied, gradient update for each video processed, 
-                            then this gradient `\nabla_{\theta}` can be approximated by Monte-Carlo (MC) sampling through a single training example:
-
-                            <span>`\nabla_{\theta} L_{RL}(\theta) \approx - (r(S) - r(S^b)) \nabla_{\theta} log p(S | F; \theta)`<span>
-                        </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                    <div >
+                        <!-- <div class="img_inner_wrap"> -->
+                        <video width="500" height="360" controls="controls">
+                            <source src="assets/video/video7922.mp4" type="video/mp4" />
+                            <source src="assets/video/video7922.webm" type="video/webm" />
+                            <source src="assets/video/video7922.ogg" type="video/ogg" />
+                            <object data="assets/video/video7922.mp4" >
+                                <embed src="assets/video/video7922.swf" />
+                            </object>
+                        </video>
                     </div>
                 </div>
-                <!-- <div class="col-lg-6">
-                    <div class="video_wrapper_2">
-                        <div class="video_thumb">
-                            <img src="assets/img/service/4.png" alt="">
-                        </div>
-                        <div class="video_inner_wrap">
-                            <a class="btn_pluse youtube"
-                                href="https://www.youtube.com/embed/QE5KOfjKLy0"><span></span></a>
-                        </div>
+                <div class="col-lg-6">
+                    <div class="common_block common_block_2">
+                        <!-- <h2 class="heading">
+                            Tags
+                        </h2> -->
+                        <p>
+                            <font size="6"><b>Tags</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">animals, group, walk, field, white, black, brown…</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Baseline:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">A group of animals are playing.</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Ours:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5" color="#000099"><b>A group of alpacas are walking.</b></font>
+
+                        </p>
+
+                        
                     </div>
-                </div> -->
+                </div>
+                
             </div>
         </div>
     </section>
     <!-- End Service Section 2-->
 
+    <br>
+    <HR>
+    <br>
+
     <!-- Start Service Section 3-->
     <section class="service_details_area section_padding_2">
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <div class="col-lg-6">
+                    <div class="common_block common_block_2">
+                        <!-- <h2 class="heading">
+                            Tags
+                        </h2> -->
+                        <p>
+                            <font size="6"><b>Tags</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">kid, cars, yellow, cartoon, school, drives, road, city…</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Baseline:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">A person is playing a car.</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Ours:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5" color="#000099"><b>A cartoon bus is driving on the road.</b></font>
+
+                        </p>
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                    <div >
+                        <!-- <div class="img_inner_wrap"> -->
+                        <video width="500" height="360" controls="controls">
+                            <source src="assets/video/video7701.mp4" type="video/mp4" />
+                            <source src="assets/video/video7701.webm" type="video/webm" />
+                            <source src="assets/video/video7701.ogg" type="video/ogg" />
+                            <object data="assets/video/video7701.mp4" >
+                                <embed src="assets/video/video7701.swf" />
+                            </object>
+                        </video>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section 3-->
+
+    <br>
+    <HR>
+    <br>
+
+    <!-- Start Service Section 4-->
+    <section class="service_details_area section_padding_2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                    <div >
+                        <!-- <div class="img_inner_wrap"> -->
+                        <video width="500" height="360" controls="controls">
+                            <source src="assets/video/video7841.mp4" type="video/mp4" />
+                            <source src="assets/video/video7841.webm" type="video/webm" />
+                            <source src="assets/video/video7841.ogg" type="video/ogg" />
+                            <object data="assets/video/video7841.mp4" >
+                                <embed src="assets/video/video7841.swf" />
+                            </object>
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="common_block common_block_2">
+                        <!-- <h2 class="heading">
+                            Tags
+                        </h2> -->
+                        <p>
+                            <font size="6"><b>Tags</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">animated, characters, flying, high, fighting…</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Baseline:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">A man is talking about a cartoon.</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Ours:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5" color="#000099"><b>Cartoon characters are fighting.</b></font>
+
+                        </p>
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section 4-->
+
+    <br>
+    <HR>
+    <br>
+
+    <!-- Start Service Section 5-->
+    <section class="service_details_area section_padding_2">
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <div class="col-lg-6">
+                    <div class="common_block common_block_2">
+                        <!-- <h2 class="heading">
+                            Tags
+                        </h2> -->
+                        <p>
+                            <font size="6"><b>Tags</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">gun, soldiers, shooting, group, running, fighting…</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Baseline:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">A person is playing a video game.</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Ours:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5" color="#000099"><b>Soldiers are fighting in a war.</b></font>
+
+                        </p>
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                    <div >
+                        <!-- <div class="img_inner_wrap"> -->
+                        <video width="500" height="360" controls="controls">
+                            <source src="assets/video/video7495.mp4" type="video/mp4" />
+                            <source src="assets/video/video7495.webm" type="video/webm" />
+                            <source src="assets/video/video7495.ogg" type="video/ogg" />
+                            <object data="assets/video/video7495.mp4" >
+                                <embed src="assets/video/video7495.swf" />
+                            </object>
+                        </video>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section 5-->
+
+    <br>
+    <HR>
+    <br>
+
+    <!-- Start Service Section 6-->
+    <section class="service_details_area section_padding_2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                    <div >
+                        <!-- <div class="img_inner_wrap"> -->
+                        <video width="500" height="360" controls="controls">
+                            <source src="assets/video/video9327.mp4" type="video/mp4" />
+                            <source src="assets/video/video9327.webm" type="video/webm" />
+                            <source src="assets/video/video9327.ogg" type="video/ogg" />
+                            <object data="assets/video/video9327.mp4" >
+                                <embed src="assets/video/video9327.swf" />
+                            </object>
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="common_block common_block_2">
+                        <!-- <h2 class="heading">
+                            Tags
+                        </h2> -->
+                        <p>
+                            <font size="6"><b>Tags</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">they, men, sitting, eat, food, table, together, Asian…</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Baseline:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5">A man is talking about a man</font>
+                        </p>
+                        <p>
+                            <font size="6"><b>Ours:</b></font> 
+                        </p>
+                        <p class="defination">
+                            <font size="5" color="#000099"><b>A group of people are eating food.</b></font>
+
+                        </p>
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section 6-->
+
+    <br>
+    <HR>
+    <br>
+
+    <!-- Start Service Section 3-->
+    <!-- <section class="service_details_area section_padding_2">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12 ">
@@ -246,24 +493,11 @@
 
                             Because our two-stage method avoids the shortcoming of having to learn an estimate of expected rewards as a baseline in RL-based loss function, it can be more effectively trained on single example of sampled sentences using SGD.
                         </p>
-                        <!-- <p class="mb-2">
-                            That’s why you can easily choose between fullwidth the theme
-                            options you can change the and layout with one click and thank
-                            to the are wordPress customizer you even.
-                        </p>
-                        <p class="m-0">
-                            That’s why you can easily choose between fullwidth the theme
-                            options you can change the and layout with one click and thank
-                            to the are wordPress customizer you even. That’s why you can easily choose between fullwidth
-                            the theme
-                            options you can change the and layout with one click and thank
-                            to the are wordPress customizer you even.
-                        </p> -->
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Service Section 3-->
 
     <!-- Start Call To Action Section -->
