@@ -922,7 +922,7 @@ body {
 
 .scrolltop.is_scroll {
   opacity: 1;
-  bottom: 50px;
+  bottom: 90px;
 }
 
 .scrolltop i {
@@ -934,7 +934,7 @@ body {
 }
 
 .scrolltop:hover {
-  bottom: 55px;
+  bottom: 100px;
 }
 
 @media (max-width: 767px) {
